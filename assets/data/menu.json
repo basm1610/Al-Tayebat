@@ -1,0 +1,111 @@
+{
+  "categories": [
+    {
+      "id": 1,
+      "name": "سندوتشات الدجاج",
+      "items": [
+        { "id": 101, "name": "تشيكن هوت", "sizes": [{ "name": "Regular", "price": 150 }, { "name": "Medium", "price": 200 }, { "name": "Large", "price": 245 }] },
+        { "id": 102, "name": "تشيكن رولز", "sizes": [{ "name": "Regular", "price": 150 }, { "name": "Medium", "price": 200 }, { "name": "Large", "price": 245 }] },
+        { "id": 103, "name": "تشيكن موزاريلا", "sizes": [{ "name": "Regular", "price": 150 }, { "name": "Medium", "price": 200 }, { "name": "Large", "price": 245 }] },
+        { "id": 104, "name": "تشيكن تركي", "sizes": [{ "name": "Regular", "price": 150 }, { "name": "Medium", "price": 200 }, { "name": "Large", "price": 245 }] },
+        { "id": 105, "name": "كوردن بلو", "sizes": [{ "name": "Regular", "price": 180 }, { "name": "Medium", "price": 230 }, { "name": "Large", "price": 275 }] },
+        { "id": 106, "name": "تشيكن بانيه", "sizes": [{ "name": "Regular", "price": 120 }, { "name": "Medium", "price": 160 }, { "name": "Large", "price": 205 }] },
+        { "id": 107, "name": "فاهيتا دجاج", "sizes": [{ "name": "Regular", "price": 120 }, { "name": "Medium", "price": 170 }, { "name": "Large", "price": 215 }] },
+        { "id": 108, "name": "شيش طاووق", "sizes": [{ "name": "Regular", "price": 130 }, { "name": "Medium", "price": 170 }, { "name": "Large", "price": 215 }] },
+        { "id": 109, "name": "تشيكن ألاجريك", "sizes": [{ "name": "Regular", "price": 130 }, { "name": "Medium", "price": 170 }, { "name": "Large", "price": 215 }] },
+        { "id": 110, "name": "تشيكن جريل", "sizes": [{ "name": "Regular", "price": 120 }, { "name": "Medium", "price": 160 }, { "name": "Large", "price": 205 }] },
+        { "id": 111, "name": "شاورما دجاج", "sizes": [{ "name": "Regular", "price": 120 }, { "name": "Medium", "price": 160 }, { "name": "Large", "price": 205 }] },
+        { "id": 112, "name": "تشيكن كرسبي", "sizes": [{ "name": "Regular", "price": 120 }, { "name": "Medium", "price": 160 }, { "name": "Large", "price": 205 }] }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "سندوتشات اللحوم",
+      "items": [
+        { "id": 201, "name": "فيليه تشيز ستيك", "sizes": [{ "name": "Regular", "price": 140 }, { "name": "Medium", "price": 180 }, { "name": "Large", "price": 205 }] },
+        { "id": 202, "name": "كفتة مشوي", "sizes": [{ "name": "Regular", "price": 130 }, { "name": "Medium", "price": 170 }, { "name": "Large", "price": 195 }] },
+        { "id": 203, "name": "كبدة إسكندراني", "sizes": [{ "name": "Regular", "price": 120 }, { "name": "Medium", "price": 170 }, { "name": "Large", "price": 195 }] },
+        { "id": 204, "name": "فاهيتا لحمة", "sizes": [{ "name": "Regular", "price": 130 }, { "name": "Medium", "price": 180 }, { "name": "Large", "price": 215 }] },
+        { "id": 205, "name": "شاورما", "sizes": [{ "name": "Regular", "price": 130 }, { "name": "Medium", "price": 180 }, { "name": "Large", "price": 215 }] }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "البرجر",
+      "items": [
+        { "id": 301, "name": "تشيز برجر", "sizes": [{ "name": "Single", "price": 110 }, { "name": "Double", "price": 150 }] },
+        { "id": 302, "name": "تشيز برجر الطيبات سبايسي", "sizes": [{ "name": "Single", "price": 130 }, { "name": "Double", "price": 170 }] },
+        { "id": 303, "name": "تشيز برجر الطيبات عادي", "sizes": [{ "name": "Single", "price": 130 }, { "name": "Double", "price": 170 }] },
+        { "id": 304, "name": "تشيز برجر الطيبات مكس عادي", "sizes": [{ "name": "Standard", "price": 210 }] },
+        { "id": 305, "name": "تشيز برجر الطيبات مكس سبايسي", "sizes": [{ "name": "Standard", "price": 210 }] }
+      ]
+    },
+    {
+      "id": 4,
+      "name": "فرايد تشيكن",
+      "items": [
+        { "id": 401, "name": "فرايد تشيكن عادي", "sizes": [{ "name": "Single", "price": 120 }, { "name": "Double", "price": 190 }] },
+        { "id": 402, "name": "فرايد تشيكن سبايسي", "sizes": [{ "name": "Single", "price": 120 }, { "name": "Double", "price": 190 }] },
+        { "id": 403, "name": "فرايد تشيكن الطيبات عادي", "sizes": [{ "name": "Single", "price": 140 }, { "name": "Double", "price": 210 }] },
+        { "id": 404, "name": "فرايد تشيكن الطيبات سبايسي", "sizes": [{ "name": "Single", "price": 140 }, { "name": "Double", "price": 210 }] }
+      ]
+    },
+    {
+      "id": 5,
+      "name": "السي فود",
+      "items": [
+        { "id": 501, "name": "سي فود بلس", "sizes": [{ "name": "Standard", "price": 245 }] },
+        { "id": 502, "name": "جمبري بانيه", "sizes": [{ "name": "Medium", "price": 230 }, { "name": "Large", "price": 280 }] }
+      ]
+    },
+    {
+      "id": 6,
+      "name": "الوجبات",
+      "items": [
+        { "id": 601, "name": "ميكس جريل", "sizes": [{ "name": "Standard", "price": 300 }] },
+        { "id": 602, "name": "وجبة مشاوي", "sizes": [{ "name": "Standard", "price": 300 }] },
+        { "id": 603, "name": "فرايد تشيكن", "sizes": [{ "name": "Standard", "price": 300 }] },
+        { "id": 604, "name": "سي فود", "sizes": [{ "name": "Standard", "price": 350 }] },
+        { "id": 605, "name": "وجبة أطفال", "sizes": [{ "name": "Standard", "price": 120 }] }
+      ]
+    },
+    {
+      "id": 7,
+      "name": "الوجبات العائلية",
+      "items": [
+        { "id": 701, "name": "ميكس جريل دبل", "sizes": [{ "name": "Standard", "price": 500 }] },
+        { "id": 702, "name": "Family ميكس جريل", "sizes": [{ "name": "Standard", "price": 700 }] },
+        { "id": 703, "name": "دجاج مشوي", "sizes": [{ "name": "Standard", "price": 450 }] },
+        { "id": 704, "name": "بوكس فرايد تشيكن", "sizes": [{ "name": "Standard", "price": 500 }] }
+      ]
+    },
+    {
+      "id": 8,
+      "name": "الأطباق",
+      "items": [
+        { "id": 801, "name": "شيش طاووق", "sizes": [{ "name": "Standard", "price": 260 }] },
+        { "id": 802, "name": "تشيكن جريل", "sizes": [{ "name": "Standard", "price": 260 }] },
+        { "id": 803, "name": "كفتة مشوي", "sizes": [{ "name": "Standard", "price": 280 }] },
+        { "id": 804, "name": "دجاج بانيه", "sizes": [{ "name": "Standard", "price": 250 }] },
+        { "id": 805, "name": "جمبري بانيه", "sizes": [{ "name": "Standard", "price": 430 }] },
+        { "id": 806, "name": "كوردون بلو", "sizes": [{ "name": "Standard", "price": 280 }] }
+      ]
+    },
+    {
+      "id": 9,
+      "name": "الإضافات",
+      "items": [
+        { "id": 901, "name": "تشيكن استربس", "sizes": [{ "name": "Standard", "price": 100 }] },
+        { "id": 902, "name": "بطاطس", "sizes": [{ "name": "Standard", "price": 25 }] },
+        { "id": 903, "name": "تشيز فرايز", "sizes": [{ "name": "Standard", "price": 50 }] },
+        { "id": 904, "name": "أرز بسمتي", "sizes": [{ "name": "Standard", "price": 25 }] },
+        { "id": 905, "name": "سلطة خضراء", "sizes": [{ "name": "Standard", "price": 10 }] },
+        { "id": 906, "name": "طحينة", "sizes": [{ "name": "Standard", "price": 10 }] },
+        { "id": 907, "name": "مخلل", "sizes": [{ "name": "Standard", "price": 10 }] },
+        { "id": 908, "name": "كول سلو", "sizes": [{ "name": "Standard", "price": 15 }] },
+        { "id": 909, "name": "مايونيز", "sizes": [{ "name": "Standard", "price": 15 }] },
+        { "id": 910, "name": "ثومية", "sizes": [{ "name": "Standard", "price": 10 }] }
+      ]
+    }
+  ]
+}
