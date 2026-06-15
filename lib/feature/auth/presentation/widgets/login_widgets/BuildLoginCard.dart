@@ -130,7 +130,11 @@ class BuildLoginCard extends StatelessWidget {
                 // Guest Continue
                 Center(
                   child: GestureDetector(
-                    onTap: () {},
+                    onTap: () {
+                      Navigator.of(
+                      context,
+                    ).push(MaterialPageRoute(builder: (_) => MainShellScreen()));
+                    },
                     child: const Text(
                       '← المتابعة كضيف',
                       textDirection: TextDirection.rtl,

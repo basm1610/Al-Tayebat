@@ -26,7 +26,6 @@ class _MainShellScreenState extends State<MainShellScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: const Color(0xFF111111),
-      // ✅ IndexedStack يحافظ على state كل screen
       body: IndexedStack(index: _currentIndex, children: _screens),
       bottomNavigationBar: _buildBottomNav(),
     );
@@ -56,7 +55,6 @@ class _MainShellScreenState extends State<MainShellScreen> {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  // ✅ indicator فوق الأيقونة المحددة
                   Icon(
                     items[i].$1,
                     color: selected ? kOrange : Colors.white.withOpacity(0.4),

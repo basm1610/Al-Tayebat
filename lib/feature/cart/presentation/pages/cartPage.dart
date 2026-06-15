@@ -1,4 +1,4 @@
-
+import 'package:apppp/feature/auth/presentation/widgets/register_widgets/BuildTopAppBar.dart';
 import 'package:apppp/feature/cart/presentation/bloc/cart_bloc.dart';
 import 'package:apppp/feature/cart/presentation/bloc/cart_state.dart';
 import 'package:apppp/feature/cart/presentation/widgets/cart_appBar.dart';
@@ -15,12 +15,14 @@ class CartScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: const Color(0xFF121212),
-      appBar: CartAppBar(),
+      // appBar: CartAppBar(),
       body: BlocBuilder<CartBloc, CartState>(
         builder: (context, state) {
           if (state.isEmpty) return const EmptyCartView();
           return Column(
             children: [
+              CartAppBar(),
+
               Expanded(
                 child: ListView.builder(
                   padding: const EdgeInsets.fromLTRB(16, 16, 16, 0),
@@ -37,4 +39,3 @@ class CartScreen extends StatelessWidget {
     );
   }
 }
-
