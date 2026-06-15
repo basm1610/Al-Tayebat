@@ -1,223 +1,203 @@
-# 🍔 الطيبات | Al-Tayebat
+# 🍔 Al-Tayebat Restaurant App
 
-تطبيق توصيل طعام مبني بـ **Flutter** باستخدام **BLoC** لإدارة الحالة، مع بيانات حقيقية من ملف JSON محلي (بدون API).
+<p align="center">
+  <!-- <img src="assets/logo.png" width="180"/> -->
+    <img width="180" height="180" alt="logo" src="https://github.com/user-attachments/assets/9cc29226-a52d-4984-980a-7489446eb665" />
+
+</p>
+
+<p align="center">
+  A modern Flutter restaurant application built using <b>BLoC Architecture</b> and Feature-First structure.
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Flutter-3.x-blue"/>
+  <img src="https://img.shields.io/badge/BLoC-State%20Management-blueviolet"/>
+  <img src="https://img.shields.io/badge/Clean-Architecture-success"/>
+  <img src="https://img.shields.io/badge/Platform-Android-green"/>
+</p>
 
 ---
 
-## 📱 لقطات من الشاشات
+# 📱 Demo
 
-| الشاشة | الوصف |
-|---|---|
-| **Home** | الواجهة الرئيسية — عروض مميزة، فئات سريعة، الأكثر مبيعاً |
-| **Menu** | قائمة الطعام كاملة مع تاب بار للفئات |
-| **Food Detail** | تفاصيل المنتج مع اختيار الحجم والكمية |
-| **Cart** | السلة — تعديل الكمية، حذف، الإجمالي |
-| **Orders** | تتبع الطلبات السابقة والحالية |
-| **Contact Us** | تواصل معنا — العنوان، الهاتف، السوشيال ميديا، الخريطة |
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/e484d5e8-9389-4159-a19c-b51d0fd6bb51" width="300">
+</p>
 
 ---
 
-## 🏗️ البنية المعمارية (Architecture)
+# ✨ Features
 
-المشروع مقسّم على أساس **Feature-First** + **BLoC Pattern**:
+### 🔐 Authentication
 
+* Login
+* Register
+* Forgot Password
+
+### 🏠 Home
+
+* Featured Offers
+* Categories
+* Best Sellers
+* Quick Navigation
+
+### 🍽 Menu
+
+* Category Tabs
+* Dynamic Food List
+* Search Ready Structure
+
+### 🍔 Food Details
+
+* Multiple Sizes
+* Quantity Selector
+* Add To Cart
+
+### 🛒 Cart
+
+* Add / Remove Items
+* Quantity Management
+* Total Price Calculation
+
+### 📦 Orders
+
+* Current Orders
+* Previous Orders
+
+### 👤 Profile
+
+* User Information
+* Settings
+
+### 📞 Contact Us
+
+* Phone Numbers
+* Address
+* Social Media Links
+* Google Maps Integration
+
+---
+
+# 📸 Screenshots
+
+## Authentication
+
+| Login                                                                                                   | Register                                                                                                | Forgot Password                                                                                         |
+| ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- |
+| <img src="https://github.com/user-attachments/assets/94117516-9000-4472-a2a3-198b42c82c2b" width="250"> | <img src="https://github.com/user-attachments/assets/e19ddd4c-9430-43ec-bba3-ccd09eaacdd3" width="250"> | <img src="https://github.com/user-attachments/assets/8444066f-87d2-401b-9b85-5e3e906e4e24" width="250"> |
+
+---
+
+## Main Screens
+
+| Home                                                                                                    | Menu                                                                                                    | Food Details                                                                                            |
+| ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- |
+| <img src="https://github.com/user-attachments/assets/e2a40781-78a8-4ba8-a065-ee3c4f8f6bf8" width="250"> | <img src="https://github.com/user-attachments/assets/c1b67726-b092-4754-8531-b6f1ca4e8a64" width="250"> | <img src="https://github.com/user-attachments/assets/639e1922-95d2-44de-b48e-3aaa56946d97" width="250"> |
+
+---
+
+## Additional Screens
+
+| Cart                                                                                                    | Orders                                                                                                  | Profile                                                                                                 |
+| ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- |
+| <img src="https://github.com/user-attachments/assets/1b52819f-72bd-4476-aa42-80ee0d7ea050" width="250"> | <img src="https://github.com/user-attachments/assets/aeac949d-bc24-4edb-bc04-785861c5aa20" width="250"> | <img src="https://github.com/user-attachments/assets/7e0a879c-9221-4799-9bf8-ad34e7de31be" width="250"> |
+
+---
+
+# 🏗 Architecture
+
+The project follows:
+
+```text
+Feature First Architecture
+        +
+BLoC State Management
 ```
+
+```text
 lib/
-├── main.dart                          # نقطة الدخول — CartBloc في أعلى الشجرة
 │
-└── features/
-    ├── home/
-    │   └── presentation/
-    │       └── screens/
-    │           └── home_screen.dart   # الهوم: عروض + فئات + أكثر مبيعاً
-    │
-    ├── menu/
-    │   ├── bloc/
-    │   │   ├── menu_bloc.dart         # منطق تحميل القائمة وتبديل الفئات
-    │   │   ├── menu_event.dart        # part of menu_bloc
-    │   │   └── menu_state.dart        # part of menu_bloc
-    │   ├── data/
-    │   │   ├── models/
-    │   │   │   ├── menu_category_model.dart
-    │   │   │   ├── menu_item_model.dart
-    │   │   │   └── item_size_model.dart
-    │   │   └── repositories/
-    │   │       └── menu_repository.dart   # يقرأ menu.json من assets
-    │   └── presentation/
-    │       └── screens/
-    │           ├── menu_screen.dart       # شاشة القائمة + تاب بار الفئات
-    │           └── food_detail_screen.dart # تفاصيل المنتج
-    │
-    └── cart/
-        ├── bloc/
-        │   ├── cart_bloc.dart         # منطق السلة (add/remove/qty)
-        │   ├── cart_event.dart        # part of cart_bloc
-        │   └── cart_state.dart        # part of cart_bloc
-        ├── data/
-        │   └── models/
-        │       └── cart_item_model.dart
-        └── presentation/
-            └── screens/
-                └── cart_screen.dart
-
-assets/
-└── data/
-    └── menu.json                      # مصدر البيانات الرئيسي
+├── core/
+│
+├── features/
+│   ├── auth/
+│   ├── home/
+│   ├── menu/
+│   ├── food_details/
+│   ├── cart/
+│   ├── orders/
+│   ├── profile/
+│   └── contact_us/
+│
+└── main.dart
 ```
 
 ---
 
-## ⚙️ التركيب والتشغيل
+# 🔄 BLoC Flow
 
-### 1. المتطلبات (pubspec.yaml)
-
-```yaml
-dependencies:
-  flutter:
-    sdk: flutter
-  flutter_bloc: ^8.1.3
-  equatable: ^2.0.5
-
-flutter:
-  uses-material-design: true
-  assets:
-    - assets/data/menu.json
-  fonts:
-    - family: Cairo
-      fonts:
-        - asset: assets/fonts/Cairo-Regular.ttf
-        - asset: assets/fonts/Cairo-Bold.ttf
-          weight: 700
+```text
+UI
+ ↓
+Event
+ ↓
+Bloc
+ ↓
+Repository
+ ↓
+State
+ ↓
+UI
 ```
 
-### 2. التثبيت
+---
+
+# 🛠 Tech Stack
+
+| Technology   | Usage                |
+| ------------ | -------------------- |
+| Flutter      | UI Framework         |
+| Dart         | Programming Language |
+| flutter_bloc | State Management     |
+| Equatable    | State Comparison     |
+| JSON         | Local Data Source    |
+
+---
+
+# 🚀 Getting Started
+
+### Clone Repository
+
+```bash
+git clone YOUR_REPOSITORY_URL
+```
+
+### Install Packages
 
 ```bash
 flutter pub get
+```
+
+### Run Project
+
+```bash
 flutter run
 ```
 
 ---
 
-## 🧠 BLoC Architecture
+# 📂 Assets
 
-### MenuBloc
-
-| Event | الوظيفة |
-|---|---|
-| `LoadMenuEvent({initialCategoryIndex})` | تحميل الفئات من JSON، مع تحديد الفئة الافتراضية المعروضة |
-| `SelectCategoryEvent(index)` | تبديل الفئة المختارة في التاب بار |
-
-| State | الوصف |
-|---|---|
-| `MenuInitial` | الحالة الأولية |
-| `MenuLoading` | جاري التحميل |
-| `MenuLoaded` | تم التحميل — يحتوي على `categories` و `selectedCategoryIndex` |
-| `MenuError` | حدث خطأ |
-
-### CartBloc
-
-| Event | الوظيفة |
-|---|---|
-| `AddToCartEvent(item, size)` | إضافة منتج — لو موجود بنفس الحجم يزيد الكمية |
-| `IncrementQuantityEvent(key)` | زيادة الكمية |
-| `DecrementQuantityEvent(key)` | تقليل الكمية (يحذف لو وصلت لـ 0) |
-| `RemoveFromCartEvent(key)` | حذف منتج بالكامل |
-| `ClearCartEvent()` | تفريغ السلة |
-
-`CartState` يوفر: `totalItems`, `totalPrice`, `isEmpty`.
-
-> **ملاحظة:** `CartBloc` مزروع في `main.dart` فوق كل التطبيق عشان يكون متاح من أي شاشة (Home, Menu, FoodDetail, Cart) بدون إعادة إنشاء.
-
----
-
-## 🔗 التنقل بين الشاشات (Navigation Flow)
-
-```
-HomeScreen
- ├─ Category Chip / Featured Offer  ──▶  MenuScreen(initialCategoryIndex: X)
- ├─ Best Seller Card                ──▶  FoodDetailScreen(item)
- ├─ Cart Icon (AppBar)              ──▶  CartScreen
- │
-MenuScreen
- ├─ Category Tab Bar                ──▶  يبدّل المنتجات المعروضة فوراً (نفس الشاشة)
- ├─ زر "+" على أي منتج              ──▶  AddToCartEvent مباشرة
- │
-FoodDetailScreen
- ├─ اختيار الحجم + الكمية
- └─ "إضافة للسلة"                   ──▶  AddToCartEvent + رجوع للخلف
+```text
+assets/
+├── images/
+├── icons/
+├── fonts/
+└── data/
+    └── menu.json
 ```
 
 ---
 
-## 📦 بيانات القائمة (menu.json)
-
-شكل البيانات:
-
-```json
-{
-  "categories": [
-    {
-      "id": 1,
-      "name": "سندوتشات الدجاج",
-      "items": [
-        {
-          "id": 101,
-          "name": "تشيكن هوت",
-          "sizes": [
-            { "name": "Regular", "price": 150 },
-            { "name": "Medium", "price": 200 },
-            { "name": "Large", "price": 245 }
-          ]
-        }
-      ]
-    }
-  ]
-}
-```
-
-- كل **Category** له `id`, `name`, و `items[]`
-- كل **Item** له `id`, `name`, و `sizes[]`
-- كل **Size** له `name` و `price`
-- المنتجات بحجم واحد فقط (`Standard`) لا تظهر لها أزرار اختيار حجم
-
----
-
-## ⭐ الأكثر مبيعاً (Best Sellers)
-
-يتم التحكم فيها من ثابت واحد في `home_screen.dart`:
-
-```dart
-const List<int> kBestSellerIds = [101, 302, 401, 503, 601, 108, 205];
-```
-
-الكود يبحث عن هذه الـ IDs داخل كل الفئات ويعرضها بنفس الترتيب. لإضافة/حذف منتج من القسم، فقط عدّل هذه القائمة.
-
----
-
-## 🎨 الألوان الأساسية (Design Tokens)
-
-| الاستخدام | الكود |
-|---|---|
-| الخلفية الأساسية | `#121212` |
-| خلفية الكروت | `#1E1E1E` / `#1A1A1A` |
-| اللون البرتقالي (Primary) | `#E07B2A` / `#E8B94F` |
-| النص الثانوي | `Colors.white54` / `white38` |
-| الخط | `Cairo` |
-
----
-
-## 🚧 خطوات قادمة (TODO)
-
-- [ ] ربط شاشة `OrdersScreen` بـ `OrderBloc` وبيانات حقيقية
-- [ ] حفظ السلة محلياً (Hive / SharedPreferences) لمنع فقدها عند إغلاق التطبيق
-- [ ] شاشة Checkout لإتمام الطلب من `CartScreen`
-- [ ] دعم البحث الفعلي في `_SearchBarWidget`
-- [ ] استبدال صور Unsplash بصور المنتجات الحقيقية (assets محلية)
-- [ ] شاشة Login / Account
-
----
-
-## 📄 الترخيص
-
-هذا المشروع لأغراض التطوير الداخلي لمطعم **الطيبات**.
+⭐ If you like the project, don't forget to give it a star.
