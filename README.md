@@ -170,7 +170,7 @@ UI
 ### Clone Repository
 
 ```bash
-git clone https://github.com/basm1610/Altaypat.git
+git clone https://github.com/basm1610/Al-Tayebat.git
 ```
 
 ### Install Packages
