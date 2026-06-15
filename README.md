@@ -170,7 +170,7 @@ UI
 ### Clone Repository
 
 ```bash
-git clone YOUR_REPOSITORY_URL
+git clone https://github.com/basm1610/Altaypat.git
 ```
 
 ### Install Packages
